@@ -25,6 +25,9 @@ HEADERS += \
     common/log/Logger.h \
     core/Core.h \
     core/data/task/Task.h \
+    core/data/task/TaskBody.h \
+    core/data/task/TaskData.h \
+    core/data/task/TaskStates.h \
     core/data/taskboard/TaskBoard.h \
     core/data/taskboard/TaskTypes.h \
     network/socket/ApplicationSocket.h \
