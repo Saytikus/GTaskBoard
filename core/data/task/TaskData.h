@@ -48,6 +48,8 @@ class TaskData {
         TaskData& operator=(TaskData &other) {
             this->type = other.type;
             this->priority = other.priority;
+
+            return *this;
         }
 
 

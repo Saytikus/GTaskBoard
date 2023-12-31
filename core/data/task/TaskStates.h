@@ -47,6 +47,8 @@ class TaskStates {
         TaskStates& operator=(TaskStates &other) {
             this->executeState = other.executeState;
             this->networkState = other.networkState;
+
+            return *this;
         }
 
 

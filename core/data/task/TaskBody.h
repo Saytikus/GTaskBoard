@@ -46,6 +46,8 @@ class TaskBody {
         TaskBody& operator=(TaskBody &other) {
             this->title = other.title;
             this->description = other.description;
+
+            return *this;
         }
 
 

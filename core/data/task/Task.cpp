@@ -56,6 +56,8 @@ Task& Task::operator=(Task &other) {
 
     this->executeState = other.getExecuteState();
     this->networkState = other.getNetworkState();
+
+    return *this;
 }
 
 
