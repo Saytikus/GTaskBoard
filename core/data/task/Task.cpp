@@ -1,5 +1,9 @@
 #include "Task.h"
 
+/*
+ * @brief operator= - перегруженный оператор инициализации.
+ * @param other - другая задача
+*/
 Task& Task::operator=(const Task &other) {
 
     // Устанавливаем ресурсы другой задачи в нашу
