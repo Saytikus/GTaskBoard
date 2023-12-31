@@ -9,10 +9,13 @@
  * @param executeState - состояние выполнения
  * @param networkState - сетевое состояние
 */
-Task::Task(const quint16 id, const QString title, const QString description, const TaskExecuteStates executeState, TaskNetworkStates networkState) {
+Task::Task(const quint16 id, const QString type, const TaskPriorities priority, const QString title, const QString description, const TaskExecuteStates executeState, TaskNetworkStates networkState) {
 
     // Инициализируем ресурсы задачи
     this->id = id;
+
+    this->type = type;
+    this->priority = priority;
 
     this->title = title;
     this->description = description;
@@ -45,6 +48,22 @@ Task::Task(Task &other) {
 */
 void Task::setID(const quint16 id) {
     this->id = id;
+}
+
+/*
+ * @brief setType - метод установки типа задачи.
+ * @param title - тип
+*/
+void Task::setType(const QString type) {
+    this->type = type;
+}
+
+/*
+ * @brief setPriority - метод установки приоритета задачи.
+ * @param priority - приоритет
+*/
+void Task::setPriority(const TaskPriorities priority) {
+    this->priority = priority;
 }
 
 /*
@@ -86,6 +105,22 @@ void Task::setNetworkState(const TaskNetworkStates networkState) {
 */
 quint16 Task::getID() {
     return this->id;
+}
+
+/*
+ * @brief getType - метод получения типа задачи.
+ * @return Тип
+*/
+QString Task::getType() {
+    return this->type;
+}
+
+/*
+ * @brief getPriority - метод получения приоритета задачи.
+ * @return Приоритет
+*/
+TaskPriorities Task::getPriority() {
+    return this->priority;
 }
 
 /*

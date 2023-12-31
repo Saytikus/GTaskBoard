@@ -20,6 +20,7 @@ SOURCES += \
 HEADERS += \
     common/enums/task/EnumTaskExecuteStates.h \
     common/enums/task/EnumTaskNetworkStates.h \
+    common/enums/task/EnumTaskPriorities.h \
     common/enums/taskboard/EnumTaskBoardRoles.h \
     common/log/Logger.h \
     core/Core.h \

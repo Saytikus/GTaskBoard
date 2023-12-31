@@ -6,6 +6,8 @@
 
 #include "common/enums/task/EnumTaskExecuteStates.h"
 #include "common/enums/task/EnumTaskNetworkStates.h"
+#include "common/enums/task/EnumTaskPriorities.h"
+
 
 /*
  * @сlass Task - класс-сущность задачи.
@@ -20,6 +22,9 @@ class Task {
 
         // Тип задачи
         QString type;
+
+        // Приоритет задачи
+        TaskPriorities priority;
 
         // Оглавление задачи
         QString title;
@@ -39,12 +44,14 @@ class Task {
         /*
          * @brief Task - конструктор по умолчанию.
          * @param id - идентификационный номер
+         * @param type - тип
+         * @param priority - приоритет
          * @param title - оглавление
          * @param description - описание
          * @param executeState - состояние выполнения
          * @param networkState - сетевое состояние
         */
-        explicit Task(const quint16 id, const QString title, const QString description, const TaskExecuteStates executeState, TaskNetworkStates networkState);
+        explicit Task(const quint16 id, const QString type, const TaskPriorities priority, const QString title, const QString description, const TaskExecuteStates executeState, TaskNetworkStates networkState);
 
         /*
          * @brief Task - конструктор копирования.
@@ -58,6 +65,18 @@ class Task {
          * @param id - идентификационный номер
         */
         void setID(const quint16 id);
+
+        /*
+         * @brief setType - метод установки типа задачи.
+         * @param title - тип
+        */
+        void setType(const QString type);
+
+        /*
+         * @brief setPriority - метод установки приоритета задачи.
+         * @param priority - приоритет
+        */
+        void setPriority(const TaskPriorities priority);
 
         /*
          * @brief setTitle - метод установки оглавления задачи.
@@ -89,6 +108,18 @@ class Task {
          * @return Идентификационный номер
         */
         quint16 getID();
+
+        /*
+         * @brief getType - метод получения типа задачи.
+         * @return Тип
+        */
+        QString getType();
+
+        /*
+         * @brief getPriority - метод получения приоритета задачи.
+         * @return Приоритет
+        */
+        TaskPriorities getPriority();
 
         /*
          * @brief getTitle - метод получения оглавления задачи.
