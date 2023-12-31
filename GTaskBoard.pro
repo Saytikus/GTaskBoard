@@ -24,6 +24,7 @@ HEADERS += \
     common/enums/taskboard/EnumTaskBoardRoles.h \
     common/log/Logger.h \
     core/Core.h \
+    core/data/base/BaseEntity.h \
     core/data/task/Task.h \
     core/data/task/TaskBody.h \
     core/data/task/TaskData.h \
