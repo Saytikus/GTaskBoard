@@ -13,8 +13,10 @@
 class TaskTypes {
 
     private:
+
         // Типы задач
         QList<QString> types;
+
 
     public:
 
@@ -22,6 +24,8 @@ class TaskTypes {
          * @brief Task - конструктор по умолчанию.
         */
         TaskTypes() {
+
+            // TODO: вынести стандартные значения в класс с константами
 
             // Добавляем в типы стандартные элементы
             types.append("Добавить");
