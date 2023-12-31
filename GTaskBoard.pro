@@ -11,7 +11,8 @@ CONFIG += c++17
 SOURCES += \
     common/log/Logger.cpp \
     core/Core.cpp \
-    core/data/Task.cpp \
+    core/data/task/Task.cpp \
+    core/data/taskboard/TaskBoard.cpp \
     init/main.cpp \
     network/socket/ApplicationSocket.cpp \
     ui/mainWindow/MainWindow.cpp
@@ -21,7 +22,9 @@ HEADERS += \
     common/enums/task/EnumTaskNetworkStates.h \
     common/log/Logger.h \
     core/Core.h \
-    core/data/Task.h \
+    core/data/task/Task.h \
+    core/data/taskboard/TaskBoard.h \
+    core/data/taskboard/TaskTypes.h \
     network/socket/ApplicationSocket.h \
     ui/mainWindow/MainWindow.h
 

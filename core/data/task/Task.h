@@ -19,7 +19,7 @@ class Task {
         quint16 id;
 
         // Тип задачи
-        //  type;
+        QString type;
 
         // Оглавление задачи
         QString title;

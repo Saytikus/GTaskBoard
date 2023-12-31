@@ -3,7 +3,7 @@
 
 #include <QtGlobal>
 
-enum TaskNetworkState : qint8 {
+enum TaskNetworkStates : qint8 {
 
     UnUploaded = -1,
 
