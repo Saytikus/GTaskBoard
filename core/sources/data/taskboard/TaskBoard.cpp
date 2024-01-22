@@ -16,17 +16,13 @@ TaskBoard::TaskBoard() {
     // Хардкодинг
     this->availableTaskTypes = new TaskTypes();
 
-    // Хардкодинг
-    this->roles->append(EnumTaskBoardRoles::Executor);
-
 }
 
-TaskBoard::TaskBoard(const quint16 id, TaskTypes *taskTypes, QList<EnumTaskBoardRoles> *roles) {
+TaskBoard::TaskBoard(const quint16 id, TaskTypes *taskTypes) {
 
     // Инициализируем ресурсы
     this->id = id;
     this->availableTaskTypes = taskTypes;
-    this->roles = roles;
 
 }
 
@@ -35,7 +31,6 @@ TaskBoard::TaskBoard(TaskBoard &other) {
     // Инициализируем свои ресурсы ресурсами другой доски задач
     this->id = other.id;
     this->availableTaskTypes = other.availableTaskTypes;
-    this->roles = other.roles;
 
 }
 
@@ -47,9 +42,5 @@ TaskBoard::~TaskBoard() {
     // Очищаем список типов задач и удаляем его
     this->availableTaskTypes->clear();
     delete availableTaskTypes;
-
-    // Очищаем список ролей и удаляем его
-    this->roles->clear();
-    delete roles;
 
 }

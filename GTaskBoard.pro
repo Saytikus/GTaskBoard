@@ -13,6 +13,7 @@ SOURCES += \
     core/sources/Core.cpp \
     core/sources/data/task/Task.cpp \
     core/sources/data/taskboard/TaskBoard.cpp \
+    core/sources/data/user/UserProfile.cpp \
     init/sources/main.cpp \
     network/sources/socket/ApplicationSocket.cpp \
     ui/sources/windows/MainWindow.cpp
@@ -20,8 +21,9 @@ SOURCES += \
 HEADERS += \
     common/sources/enums/task/EnumTaskExecuteStates.h \
     common/sources/enums/task/EnumTaskNetworkStates.h \
+    common/sources/enums/taskboard/EnumTaskBoardTypes.h \
+    common/sources/enums/user/EnumUserProfileRoles.h \
     commonsources//enums/task/EnumTaskPriorities.h \
-    common/sources/enums/taskboard/EnumTaskBoardRoles.h \
     common/sources/logs/Logger.h \
     core/sources/Core.h \
     core/sources/data/base/BaseEntity.h \
@@ -32,6 +34,7 @@ HEADERS += \
     core/sources/data/task/TaskTime.h \
     core/sources/data/taskboard/TaskBoard.h \
     core/sources/data/taskboard/TaskTypes.h \
+    core/sources/data/user/UserProfile.h \
     network/sources/socket/ApplicationSocket.h \
     ui/sources/windows/MainWindow.h
 
