@@ -3,7 +3,10 @@
 
 #include <QtGlobal>
 
-enum TaskExecuteStates : quint8 {
+/**
+ * @brief The EnumTaskExecuteStates enum - набор состояний выполнения задачи
+ */
+enum EnumTaskExecuteStates : quint8 {
 
     AvailableForExecute = 0,
 

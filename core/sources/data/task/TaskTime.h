@@ -12,8 +12,14 @@ class TaskTime {
 
     protected:
 
+        /**
+         * @brief creationTime - время создания задачи
+         */
         QDateTime creationTime;
 
+        /**
+         * @brief completionTime - время завершения задачи
+         */
         QDateTime completionTime;
 
     public:

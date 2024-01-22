@@ -17,11 +17,11 @@ TaskBoard::TaskBoard() {
     this->availableTaskTypes = new TaskTypes();
 
     // Хардкодинг
-    this->roles->append(TaskBoardRoles::Executor);
+    this->roles->append(EnumTaskBoardRoles::Executor);
 
 }
 
-TaskBoard::TaskBoard(const quint16 id, TaskTypes *taskTypes, QList<TaskBoardRoles> *roles) {
+TaskBoard::TaskBoard(const quint16 id, TaskTypes *taskTypes, QList<EnumTaskBoardRoles> *roles) {
 
     // Инициализируем ресурсы
     this->id = id;
@@ -39,7 +39,7 @@ TaskBoard::TaskBoard(TaskBoard &other) {
 
 }
 
-/*
+/**
  * @brief ~TaskBoard - деструктор. Очищает память от полей класса.
 */
 TaskBoard::~TaskBoard() {

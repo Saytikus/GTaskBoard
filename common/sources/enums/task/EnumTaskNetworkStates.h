@@ -3,7 +3,10 @@
 
 #include <QtGlobal>
 
-enum TaskNetworkStates : qint8 {
+/**
+ * @brief The EnumTaskNetworkStates enum - набор сетевых состояний задачи
+ */
+enum EnumTaskNetworkStates : qint8 {
 
     UnUploaded = -1,
 

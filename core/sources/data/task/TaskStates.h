@@ -4,35 +4,43 @@
 #include "common/sources/enums/task/EnumTaskExecuteStates.h"
 #include "common/sources/enums/task/EnumTaskNetworkStates.h"
 
+/**
+ * @brief The TaskStates class - класс, хранящий информацию о состояниях задачи
+ */
 class TaskStates {
 
     protected:
 
-        // Состояние выполнения задачи
-        TaskExecuteStates executeState;
+        /**
+         * @brief executeState - состояние выполнения задачи
+         */
+        EnumTaskExecuteStates executeState;
 
-        // Сетевое состояние задачи
-        TaskNetworkStates networkState;
+
+        /**
+         * @brief networkState - сетевое состояние задачи
+         */
+        EnumTaskNetworkStates networkState;
 
     public:
 
-        /*
+        /**
          * @brief TaskStates- конструктор по умолчанию.
          * @details Удалён
         */
         TaskStates() = delete;
 
-        /*
+        /**
          * @brief TaskStates - конструктор инициализации.
          * @param executeState - состояние выполнения задачи
          * @param networkState - сетевое состояние задачи
         */
-        TaskStates(const TaskExecuteStates executeState, const TaskNetworkStates networkState) {
+        TaskStates(const EnumTaskExecuteStates executeState, const EnumTaskNetworkStates networkState) {
             this->executeState = executeState;
             this->networkState = networkState;
         }
 
-        /*
+        /**
          * @brief TaskStates - конструктор копирования.
          * @param other - другие состояния задачи
         */
@@ -41,7 +49,7 @@ class TaskStates {
             this->networkState = other.networkState;
         }
 
-        /*
+        /**
          * @brief operator= - перегруженный оператор инициализации.
          * @param other - другие состояния задачи
         */
@@ -53,36 +61,36 @@ class TaskStates {
         }
 
 
-        /*
+        /**
          * @brief setExecuteState - метод установки состояния выполнения задачи.
          * @param executeState - состояние выполнения
         */
-        void setExecuteState(const TaskExecuteStates executeState) {
+        void setExecuteState(const EnumTaskExecuteStates executeState) {
             this->executeState = executeState;
         }
 
-        /*
+        /**
          * @brief setNetworkState - метод установки сетевого состояния задачи.
          * @param networkState - сетевое состояние
         */
-        void setNetworkState(const TaskNetworkStates networkState) {
+        void setNetworkState(const EnumTaskNetworkStates networkState) {
             this->networkState = networkState;
         }
 
 
-        /*
+        /**
          * @brief getExecuteState - метод получения состояния выполнения задачи.
          * @return Состояние выполнения
         */
-        TaskExecuteStates getExecuteState() {
+        EnumTaskExecuteStates getExecuteState() {
             return this->executeState;
         }
 
-        /*
+        /**
          * @brief getNetworkState - метод получения сетевого состояния задачи.
          * @return Сетевое состояние
         */
-        TaskNetworkStates getNetworkState() {
+        EnumTaskNetworkStates getNetworkState() {
             return this->networkState;
         }
 

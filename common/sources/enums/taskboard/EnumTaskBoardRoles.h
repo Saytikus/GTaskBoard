@@ -3,7 +3,7 @@
 
 #include <QtGlobal>
 
-enum TaskBoardRoles : quint8 {
+enum EnumTaskBoardRoles : quint8 {
 
     Executor = 0,
 

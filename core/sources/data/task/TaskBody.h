@@ -3,27 +3,35 @@
 
 #include <QString>
 
+/**
+ * @brief The TaskBody class - класс, хранящий информацию о заголовке и описании задачи
+ */
 class TaskBody {
 
     protected:
 
-        // Оглавление задачи
+
+        /**
+         * @brief title - заголовок задачи
+         */
         QString title;
 
-        // Описание задачи
+        /**
+         * @brief description - описание задачи
+         */
         QString description;
 
     public:
 
-        /*
+        /**
          * @brief TaskBody - конструктор по умолчанию.
          * @details Удалён
         */
         TaskBody() = delete;
 
-        /*
+        /**
          * @brief TaskBody - конструктор инициализации.
-         * @param title - оглавление задачи
+         * @param title - заголовок задачи
          * @param description - описание задачи
         */
         TaskBody(const QString title, const QString description) {
@@ -31,7 +39,7 @@ class TaskBody {
             this->description = description;
         }
 
-        /*
+        /**
          * @brief TaskBody - конструктор копирования.
          * @param other - другое тело задачи
         */
@@ -40,7 +48,7 @@ class TaskBody {
             this->description = other.description;
         }
 
-        /*
+        /**
          * @brief operator= - перегруженный оператор инициализации.
          * @param other - другое тело задачи
         */
@@ -52,15 +60,15 @@ class TaskBody {
         }
 
 
-        /*
-         * @brief setTitle - метод установки оглавления задачи.
-         * @param title - оглавление
+        /**
+         * @brief setTitle - метод установки заголовка задачи.
+         * @param title - заголовок
         */
         void setTitle(const QString title) {
             this->title = title;
         }
 
-        /*
+        /**
          * @brief setDescription - метод установки описания задачи.
          * @param description - описание
         */
@@ -69,15 +77,15 @@ class TaskBody {
         }
 
 
-        /*
-         * @brief getTitle - метод получения оглавления задачи.
-         * @return Оглавление
+        /**
+         * @brief getTitle - метод получения заголовка задачи.
+         * @return Заголовок
         */
         QString getTitle() {
             return this->title;
         }
 
-        /*
+        /**
          * @brief getDescription - метод получения описания задачи.
          * @return Описание
         */
