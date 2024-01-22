@@ -1,6 +1,58 @@
 #include "Task.h"
 
-/*
+
+/**
+ * @brief Task - конструктор инициализации без id. В данном случае id присваивается стандартное
+ * значение
+ * @param priority - приоритет задачи
+ * @param time - время задачи
+ * @param body - тело задачи
+ * @param states - состояния задачи
+*/
+Task::Task(const TaskPriorities priority, TaskTime time, TaskBody body, TaskStates states) : TaskTime(time), TaskBody(body), TaskStates(states) {
+
+    // TODO: Поменять на константу
+    this->id = 0000;
+
+    this->priority = priority;
+}
+
+/**
+ * @brief Task - конструктор инициализации с id.
+ * @param id - идентификационный номер
+ * @param priority - приоритет задачи
+ * @param time - время задачи
+ * @param body - тело задачи
+ * @param states - состояния задачи
+*/
+Task::Task(const quint16 id, const TaskPriorities priority, TaskTime time, TaskBody body, TaskStates states) : TaskTime(time), TaskBody(body), TaskStates(states) {
+    this->id = id;
+    this->priority = priority;
+}
+
+/**
+ * @brief Task - конструктор инициализации с получением id из сущности.
+ * @param priority - приоритет задачи
+ * @param entity - базовая сущность
+ * @param time - время задачи
+ * @param body - тело задачи
+ * @param states - состояния задачи
+*/
+Task::Task(const TaskPriorities priority, BaseEntity entity, TaskTime time, TaskBody body, TaskStates states) : BaseEntity(entity), TaskTime(time), TaskBody(body), TaskStates(states) {
+
+    this->priority = priority;
+}
+
+/**
+ * @brief Task - конструктор копирования.
+ * @param other - другая задача
+*/
+Task::Task(Task &other) : BaseEntity(other), TaskTime(other), TaskBody(other), TaskStates(other) {
+
+    this->priority = other.priority;
+}
+
+/**
  * @brief operator= - перегруженный оператор инициализации.
  * @param other - другая задача
 */
@@ -8,6 +60,8 @@ Task& Task::operator=(const Task &other) {
 
     // Устанавливаем ресурсы другой задачи в нашу
     this->id = other.id;
+
+    this->priority = other.priority;
 
     this->creationTime = other.creationTime;
     this->completionTime = other.completionTime;
