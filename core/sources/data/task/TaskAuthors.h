@@ -60,6 +60,30 @@ class TaskAuthors {
 
             return *this;
         }
+
+        /**
+         * @brief setExecutorID - метод установки идентификационного номера исполнителя задачи
+         * @param executorID - идентификационный номер исполнителя задачи
+         */
+        void setExecutorID(const quint32 executorID) {
+            this->executorID = executorID;
+        }
+
+        /**
+         * @brief getAuthorID - метод получения идентификационного номера создателя задачи
+         * @return Идентификационный номер создателя задачи
+         */
+        quint32 getAuthorID() {
+            return this->authorID;
+        }
+
+        /**
+         * @brief getExecutorID - метод получения идентификационного номера исполнителя задачи
+         * @return Идентификационный номер исполнителя задачи
+         */
+        quint32 getExecutorID() {
+            return this->executorID;
+        }
 };
 
 #endif // TASKAUTHORS_H
