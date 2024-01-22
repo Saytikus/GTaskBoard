@@ -9,35 +9,37 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    common/log/Logger.cpp \
-    core/Core.cpp \
-    core/data/task/Task.cpp \
-    core/data/taskboard/TaskBoard.cpp \
-    init/main.cpp \
-    network/socket/ApplicationSocket.cpp \
-    ui/mainWindow/MainWindow.cpp
+    common/sources/logs/Logger.cpp \
+    core/sources/Core.cpp \
+    core/sources/data/task/Task.cpp \
+    core/sources/data/taskboard/TaskBoard.cpp \
+    init/sources/main.cpp \
+    network/sources/socket/ApplicationSocket.cpp \
+    ui/sources/windows/MainWindow.cpp
 
 HEADERS += \
-    common/enums/task/EnumTaskExecuteStates.h \
-    common/enums/task/EnumTaskNetworkStates.h \
-    common/enums/task/EnumTaskPriorities.h \
-    common/enums/taskboard/EnumTaskBoardRoles.h \
-    common/log/Logger.h \
-    core/Core.h \
-    core/data/base/BaseEntity.h \
-    core/data/task/Task.h \
-    core/data/task/TaskBody.h \
-    core/data/task/TaskData.h \
-    core/data/task/TaskStates.h \
-    core/data/taskboard/TaskBoard.h \
-    core/data/taskboard/TaskTypes.h \
-    network/socket/ApplicationSocket.h \
-    ui/mainWindow/MainWindow.h
+    common/sources/enums/task/EnumTaskExecuteStates.h \
+    common/sources/enums/task/EnumTaskNetworkStates.h \
+    commonsources//enums/task/EnumTaskPriorities.h \
+    common/sources/enums/taskboard/EnumTaskBoardRoles.h \
+    common/sources/logs/Logger.h \
+    core/sources/Core.h \
+    core/sources/data/base/BaseEntity.h \
+    core/sources/data/task/Task.h \
+    core/sources/data/task/TaskBody.h \
+    core/sources/data/task/TaskData.h \
+    core/sources/data/task/TaskStates.h \
+    core/sources/data/taskboard/TaskBoard.h \
+    core/sources/data/taskboard/TaskTypes.h \
+    network/sources/socket/ApplicationSocket.h \
+    ui/sources/windows/MainWindow.h
 
 FORMS += \
-    ui/mainWindow/MainWindow.ui
+    ui/sources/windows/MainWindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES +=
