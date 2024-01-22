@@ -8,8 +8,11 @@
  * @param time - время задачи
  * @param body - тело задачи
  * @param states - состояния задачи
+ * @param authors - авторы задачи
 */
-Task::Task(const TaskPriorities priority, TaskTime time, TaskBody body, TaskStates states) : TaskTime(time), TaskBody(body), TaskStates(states) {
+Task::Task(const TaskPriorities priority, TaskTime time, TaskBody body, TaskStates states, TaskAuthors authors)
+    : TaskTime(time), TaskBody(body), TaskStates(states), TaskAuthors(authors) {
+
 
     // TODO: Поменять на константу
     this->id = 0000;
@@ -24,8 +27,12 @@ Task::Task(const TaskPriorities priority, TaskTime time, TaskBody body, TaskStat
  * @param time - время задачи
  * @param body - тело задачи
  * @param states - состояния задачи
+ * @param authors - авторы задачи
 */
-Task::Task(const quint16 id, const TaskPriorities priority, TaskTime time, TaskBody body, TaskStates states) : TaskTime(time), TaskBody(body), TaskStates(states) {
+Task::Task(const quint16 id, const TaskPriorities priority, TaskTime time, TaskBody body, TaskStates states, TaskAuthors authors)
+    : TaskTime(time), TaskBody(body), TaskStates(states), TaskAuthors(authors) {
+
+
     this->id = id;
     this->priority = priority;
 }
@@ -37,8 +44,10 @@ Task::Task(const quint16 id, const TaskPriorities priority, TaskTime time, TaskB
  * @param time - время задачи
  * @param body - тело задачи
  * @param states - состояния задачи
+ * @param authors - авторы задачи
 */
-Task::Task(const TaskPriorities priority, BaseEntity entity, TaskTime time, TaskBody body, TaskStates states) : BaseEntity(entity), TaskTime(time), TaskBody(body), TaskStates(states) {
+Task::Task(const TaskPriorities priority, BaseEntity entity, TaskTime time, TaskBody body, TaskStates states, TaskAuthors authors)
+    : BaseEntity(entity), TaskTime(time), TaskBody(body), TaskStates(states), TaskAuthors(authors) {
 
     this->priority = priority;
 }
@@ -47,7 +56,7 @@ Task::Task(const TaskPriorities priority, BaseEntity entity, TaskTime time, Task
  * @brief Task - конструктор копирования.
  * @param other - другая задача
 */
-Task::Task(Task &other) : BaseEntity(other), TaskTime(other), TaskBody(other), TaskStates(other) {
+Task::Task(Task &other) : BaseEntity(other), TaskTime(other), TaskBody(other), TaskStates(other), TaskAuthors(other) {
 
     this->priority = other.priority;
 }
@@ -71,6 +80,9 @@ Task& Task::operator=(const Task &other) {
 
     this->executeState = other.executeState;
     this->networkState = other.networkState;
+
+    this->authorID = other.authorID;
+    this->executorID = other.executorID;
 
     return *this;
 }

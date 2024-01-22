@@ -8,13 +8,14 @@
 #include "core/sources/data/task/TaskTime.h"
 #include "core/sources/data/task/TaskBody.h"
 #include "core/sources/data/task/TaskStates.h"
+#include "core/sources/data/task/TaskAuthors.h""
 
 #include "common/sources/enums/task/EnumTaskPriorities.h"
 
 /**
  * @brief The Task class - класс-сущность задачи.
  */
-class Task : public BaseEntity, public TaskTime, public TaskBody, public TaskStates {
+class Task : public BaseEntity, public TaskTime, public TaskBody, public TaskStates, public TaskAuthors {
 
     private:
 
@@ -26,14 +27,21 @@ class Task : public BaseEntity, public TaskTime, public TaskBody, public TaskSta
     public:
 
         /**
+         * @brief Task - конструктор по умолчанию
+         * @details Удалён
+         */
+        Task() = delete;
+
+        /**
          * @brief Task - конструктор инициализации без id. В данном случае id присваивается стандартное
          * значение
          * @param priority - приоритет задачи
          * @param time - время задачи
          * @param body - тело задачи
          * @param states - состояния задачи
+         * @param authors - авторы задачи
         */
-        Task(const TaskPriorities priority, TaskTime time, TaskBody body, TaskStates states);
+        Task(const TaskPriorities priority, TaskTime time, TaskBody body, TaskStates states, TaskAuthors authors);
 
         /**
          * @brief Task - конструктор инициализации с id.
@@ -42,8 +50,9 @@ class Task : public BaseEntity, public TaskTime, public TaskBody, public TaskSta
          * @param time - время задачи
          * @param body - тело задачи
          * @param states - состояния задачи
+         * @param authors - авторы задачи
         */
-        Task(const quint16 id, const TaskPriorities priority, TaskTime time, TaskBody body, TaskStates states);
+        Task(const quint16 id, const TaskPriorities priority, TaskTime time, TaskBody body, TaskStates states, TaskAuthors authors);
 
         /**
          * @brief Task - конструктор инициализации с получением id из сущности.
@@ -52,8 +61,9 @@ class Task : public BaseEntity, public TaskTime, public TaskBody, public TaskSta
          * @param time - время задачи
          * @param body - тело задачи
          * @param states - состояния задачи
+         * @param authors - авторы задачи
         */
-        Task(const TaskPriorities priority, BaseEntity entity, TaskTime time, TaskBody body, TaskStates states);
+        Task(const TaskPriorities priority, BaseEntity entity, TaskTime time, TaskBody body, TaskStates states, TaskAuthors authors);
 
         /**
          * @brief Task - конструктор копирования.

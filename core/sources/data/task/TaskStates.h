@@ -18,8 +18,9 @@ class TaskStates {
 
         /*
          * @brief TaskStates- конструктор по умолчанию.
+         * @details Удалён
         */
-        TaskStates(){};
+        TaskStates() = delete;
 
         /*
          * @brief TaskStates - конструктор инициализации.

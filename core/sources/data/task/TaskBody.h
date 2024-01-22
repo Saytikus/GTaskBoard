@@ -17,8 +17,9 @@ class TaskBody {
 
         /*
          * @brief TaskBody - конструктор по умолчанию.
+         * @details Удалён
         */
-        TaskBody(){};
+        TaskBody() = delete;
 
         /*
          * @brief TaskBody - конструктор инициализации.

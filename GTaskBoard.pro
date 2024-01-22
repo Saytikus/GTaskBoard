@@ -26,6 +26,7 @@ HEADERS += \
     core/sources/Core.h \
     core/sources/data/base/BaseEntity.h \
     core/sources/data/task/Task.h \
+    core/sources/data/task/TaskAuthors.h \
     core/sources/data/task/TaskBody.h \
     core/sources/data/task/TaskStates.h \
     core/sources/data/task/TaskTime.h \

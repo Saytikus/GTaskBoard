@@ -20,8 +20,9 @@ class TaskTime {
 
         /**
          * @brief TaskData - конструктор по умолчанию.
+         * @details Удалён
         */
-        TaskTime(){};
+        TaskTime() = delete;
 
         /**
          * @brief TaskData - конструктор инициализации.
