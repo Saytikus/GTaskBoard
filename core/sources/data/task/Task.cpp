@@ -9,8 +9,8 @@ Task& Task::operator=(const Task &other) {
     // Устанавливаем ресурсы другой задачи в нашу
     this->id = other.id;
 
-    this->type = other.type;
-    this->priority = other.priority;
+    this->creationTime = other.creationTime;
+    this->completionTime = other.completionTime;
 
     this->title = other.title;
     this->description = other.description;

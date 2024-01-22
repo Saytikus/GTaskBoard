@@ -27,8 +27,8 @@ HEADERS += \
     core/sources/data/base/BaseEntity.h \
     core/sources/data/task/Task.h \
     core/sources/data/task/TaskBody.h \
-    core/sources/data/task/TaskData.h \
     core/sources/data/task/TaskStates.h \
+    core/sources/data/task/TaskTime.h \
     core/sources/data/taskboard/TaskBoard.h \
     core/sources/data/taskboard/TaskTypes.h \
     network/sources/socket/ApplicationSocket.h \
