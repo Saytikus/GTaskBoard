@@ -10,7 +10,7 @@
 #include "core/sources/data/task/TaskTime.h"
 #include "core/sources/data/task/TaskBody.h"
 #include "core/sources/data/task/TaskStates.h"
-#include "core/sources/data/task/TaskAuthors.h""
+#include "core/sources/data/task/TaskAuthors.h"
 
 #include "common/sources/enums/task/EnumTaskPriorities.h"
 
@@ -24,7 +24,7 @@ class Task : public BaseEntity, public TaskTime, public TaskBody, public TaskSta
         /**
          * @brief priority - приоритет задачи
          */
-        TaskPriorities priority;
+        EnumTaskPriorities priority;
 
         /**
          * @brief attachments - приложения задачи ( прикреплённые файлы )
@@ -49,7 +49,7 @@ class Task : public BaseEntity, public TaskTime, public TaskBody, public TaskSta
          * @param states - состояния задачи
          * @param authors - авторы задачи
         */
-        Task(const TaskPriorities priority, const QStringList attachments, TaskTime time, TaskBody body, TaskStates states, TaskAuthors authors);
+        Task(const EnumTaskPriorities priority, const QStringList attachments, TaskTime time, TaskBody body, TaskStates states, TaskAuthors authors);
 
         /**
          * @brief Task - конструктор инициализации с id.
@@ -61,7 +61,7 @@ class Task : public BaseEntity, public TaskTime, public TaskBody, public TaskSta
          * @param states - состояния задачи
          * @param authors - авторы задачи
         */
-        Task(const quint16 id, const TaskPriorities priority, const QStringList attachments, TaskTime time, TaskBody body, TaskStates states, TaskAuthors authors);
+        Task(const quint16 id, const EnumTaskPriorities priority, const QStringList attachments, TaskTime time, TaskBody body, TaskStates states, TaskAuthors authors);
 
         /**
          * @brief Task - конструктор инициализации с получением id из сущности.
@@ -73,7 +73,7 @@ class Task : public BaseEntity, public TaskTime, public TaskBody, public TaskSta
          * @param states - состояния задачи
          * @param authors - авторы задачи
         */
-        Task(const TaskPriorities priority, const QStringList attachments, BaseEntity entity, TaskTime time, TaskBody body, TaskStates states, TaskAuthors authors);
+        Task(const EnumTaskPriorities priority, const QStringList attachments, BaseEntity entity, TaskTime time, TaskBody body, TaskStates states, TaskAuthors authors);
 
         /**
          * @brief Task - конструктор копирования.

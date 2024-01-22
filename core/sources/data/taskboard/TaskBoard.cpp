@@ -13,24 +13,24 @@ TaskBoard::TaskBoard() {
     //Хардкодинг
     this->id = 0000;
 
-    // Хардкодинг
-    this->availableTaskTypes = new TaskTypes();
 
 }
 
-TaskBoard::TaskBoard(const quint16 id, TaskTypes *taskTypes) {
+TaskBoard::TaskBoard(const quint16 id) {
 
     // Инициализируем ресурсы
     this->id = id;
-    this->availableTaskTypes = taskTypes;
 
 }
 
+/**
+ * @brief TaskBoard - конструктор копирования
+ * @param other - другая доска задач
+*/
 TaskBoard::TaskBoard(TaskBoard &other) {
 
     // Инициализируем свои ресурсы ресурсами другой доски задач
     this->id = other.id;
-    this->availableTaskTypes = other.availableTaskTypes;
 
 }
 
@@ -38,9 +38,5 @@ TaskBoard::TaskBoard(TaskBoard &other) {
  * @brief ~TaskBoard - деструктор. Очищает память от полей класса.
 */
 TaskBoard::~TaskBoard() {
-
-    // Очищаем список типов задач и удаляем его
-    this->availableTaskTypes->clear();
-    delete availableTaskTypes;
 
 }

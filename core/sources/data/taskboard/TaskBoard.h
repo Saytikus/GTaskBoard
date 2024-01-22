@@ -3,8 +3,6 @@
 
 #include <QtGlobal>
 
-#include "core/sources/data/taskboard/TaskTypes.h"
-
 /**
  * @ TaskBoard - класс-сущность доски задач.
  *
@@ -49,37 +47,28 @@ class TaskBoard {
          */
         quint16 id;
 
-        // Список доступных типов для задач
-        TaskTypes *availableTaskTypes;
-
     public:
 
-        /**
-         * @brief TaskBoard - конструктор по умолчанию
-        */
+
         TaskBoard();
 
-        /**
-         * @brief TaskBoard - конструктор по умолчанию, с аргументами
-         * @param id - идентификационнный номер доски задач
-         * @param taskTypes - список типов задач
-        */
-        TaskBoard(const quint16 id, TaskTypes *taskTypes);
+
+        TaskBoard(const quint16 id);
 
         /**
-         * @brief TaskBoard - конструктор по копирования
+         * @brief TaskBoard - конструктор копирования
          * @param other - другая доска задач
         */
         TaskBoard(TaskBoard &other);
 
         /**
          * @brief operator= - перегруженный оператор инициализации
-         * @description Удалён.
+         * @details Удалён.
         */
         TaskBoard& operator=(TaskBoard &other) = delete;
 
         /**
-         * @brief ~TaskBoard - деструктор. Очищает память от полей класса
+         * @brief ~TaskBoard - деструктор.
         */
         ~TaskBoard();
 

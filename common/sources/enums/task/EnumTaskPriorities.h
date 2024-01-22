@@ -3,7 +3,10 @@
 
 #include <QtGlobal>
 
-enum TaskPriorities : quint8 {
+/**
+ * @brief The EnumTaskPriorities enum - набор приоритетов задачи
+ */
+enum EnumTaskPriorities : quint8 {
 
     Low,
 

@@ -11,7 +11,7 @@
  * @param states - состояния задачи
  * @param authors - авторы задачи
 */
-Task::Task(const TaskPriorities priority, const QStringList attachments, TaskTime time, TaskBody body, TaskStates states, TaskAuthors authors)
+Task::Task(const EnumTaskPriorities priority, const QStringList attachments, TaskTime time, TaskBody body, TaskStates states, TaskAuthors authors)
     : TaskTime(time), TaskBody(body), TaskStates(states), TaskAuthors(authors) {
 
 
@@ -32,7 +32,7 @@ Task::Task(const TaskPriorities priority, const QStringList attachments, TaskTim
  * @param states - состояния задачи
  * @param authors - авторы задачи
 */
-Task::Task(const quint16 id, const TaskPriorities priority, const QStringList attachments, TaskTime time, TaskBody body, TaskStates states, TaskAuthors authors)
+Task::Task(const quint16 id, const EnumTaskPriorities priority, const QStringList attachments, TaskTime time, TaskBody body, TaskStates states, TaskAuthors authors)
     : TaskTime(time), TaskBody(body), TaskStates(states), TaskAuthors(authors) {
 
 
@@ -51,7 +51,7 @@ Task::Task(const quint16 id, const TaskPriorities priority, const QStringList at
  * @param states - состояния задачи
  * @param authors - авторы задачи
 */
-Task::Task(const TaskPriorities priority, const QStringList attachments, BaseEntity entity, TaskTime time, TaskBody body, TaskStates states, TaskAuthors authors)
+Task::Task(const EnumTaskPriorities priority, const QStringList attachments, BaseEntity entity, TaskTime time, TaskBody body, TaskStates states, TaskAuthors authors)
     : BaseEntity(entity), TaskTime(time), TaskBody(body), TaskStates(states), TaskAuthors(authors) {
 
     this->priority = priority;
