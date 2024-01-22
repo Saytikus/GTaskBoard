@@ -3,7 +3,7 @@
 
 #include <QString>
 
-#include "common/enums/task/EnumTaskPriorities.h"
+#include "common/sources/enums/task/EnumTaskPriorities.h"
 
 class TaskData {
 

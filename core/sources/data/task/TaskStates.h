@@ -1,8 +1,8 @@
 #ifndef TASKSTATES_H
 #define TASKSTATES_H
 
-#include "common/enums/task/EnumTaskExecuteStates.h"
-#include "common/enums/task/EnumTaskNetworkStates.h"
+#include "common/sources/enums/task/EnumTaskExecuteStates.h"
+#include "common/sources/enums/task/EnumTaskNetworkStates.h"
 
 class TaskStates {
 

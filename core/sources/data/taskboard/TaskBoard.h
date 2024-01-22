@@ -3,9 +3,9 @@
 
 #include <QtGlobal>
 
-#include "core/data/taskboard/TaskTypes.h"
+#include "core/sources/data/taskboard/TaskTypes.h"
 
-#include "common/enums/taskboard/EnumTaskBoardRoles.h"
+#include "common/sources/enums/taskboard/EnumTaskBoardRoles.h"
 
 /*
  * @сlass TaskBoard - класс-сущность доски задач.

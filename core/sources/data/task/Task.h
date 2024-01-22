@@ -3,11 +3,11 @@
 
 #include <QtGlobal>
 
-#include "core/data/base/BaseEntity.h"
+#include "core/sources/data/base/BaseEntity.h"
 
-#include "core/data/task/TaskData.h"
-#include "core/data/task/TaskBody.h"
-#include "core/data/task/TaskStates.h"
+#include "core/sources/data/task/TaskData.h"
+#include "core/sources/data/task/TaskBody.h"
+#include "core/sources/data/task/TaskStates.h"
 
 /*
  * @сlass Task - класс-сущность задачи.
